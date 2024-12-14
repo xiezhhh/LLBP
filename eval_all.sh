@@ -110,7 +110,7 @@ done
 
 echo "Running ${#commands[@]} simulations"
 
-parallel --jobs $(nproc) ::: "${commands[@]}"
+parallel --jobs 16 ::: "${commands[@]}"
 
 wait
 echo "Simulation complete."
